@@ -97,6 +97,10 @@ ul {
 }
 #bgmonitor_container_mainimage {}
 #bgmonitor_mainimage {}
+#box_container_mainimage {
+    height: 200px;
+}
+#box_mainimage {}
 #iopm_container_mainimage {
     height: 235px;
 }
