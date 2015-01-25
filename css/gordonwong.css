@@ -97,6 +97,10 @@ ul {
 }
 #bgmonitor_container_mainimage {}
 #bgmonitor_mainimage {}
+#tabtrekker_container_mainimage{
+    height: 180px;
+}
+#tabtrekker_mainimage{}
 #box_container_mainimage {
     height: 200px;
 }
