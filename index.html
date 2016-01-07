@@ -18,6 +18,32 @@
       <!-- Title -->
       <h1 id="title">Gordon Wong</h1>
       <h1 id="subtitle">Software Engineer</h1>
+
+      <!-- Tabs -->
+      <nav class="section">
+        <ul class="nav nav-justified nav-tabs" role="tablist">
+          <li class="active" role="presentation">
+            <a href="#home" aria-controls="home" role="tab" data-toggle="tab">Home</a>
+          </li>
+          <li role="presentation">
+            <a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Profile</a>
+          </li>
+          <li role="presentation">
+            <a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Messages</a>
+          </li>
+          <li role="presentation">
+            <a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Settings</a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Tab content -->
+      <div class="tab-content section">
+        <div id="home" class="tab-pane fade in active" role="tabpanel">Home</div>
+        <div id="profile" class="tab-pane fade" role="tabpanel">Profile</div>
+        <div id="messages" class="tab-pane fade" role="tabpanel">Messages</div>
+        <div id="settings" class="tab-pane fade" role="tabpanel">Settings</div>
+      </div>
     </div>
 
     <!-- Footer -->
@@ -25,5 +51,6 @@
     </nav>
 
     <script src="js/jquery-2.1.3.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
   </body>
 </html>
