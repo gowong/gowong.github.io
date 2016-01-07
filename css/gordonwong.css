@@ -12,6 +12,7 @@ body {
 
 /* IDs */
 #title {
+  margin-bottom: 2.5px;
   color: #EE724E;
 }
 #subtitle {
@@ -21,4 +22,13 @@ body {
 #footer {
   height: 150px;
   background-color: #EE724E;
+  color: #fff;
+  font-size: 12px;
+  line-height: 24px;
+}
+#footer > .section {
+  margin-top: 25px;
+}
+#footer a {
+  color: #fff;
 }
