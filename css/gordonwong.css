@@ -1,8 +1,30 @@
 /* Tags */
 body {
   background-color: #fff;
+  color: #7E7F80;
+  line-height: 22px;
   /* Must be same as footer height */
   padding-bottom: 150px;
+}
+
+b {
+  color: #4A4B4C;
+}
+
+a, a:hover, a > b {
+  color: #EE724E;
+}
+
+hr {
+  height: 1px;
+  background-color: #EEEFF0;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+hr.section-hr {
+  height: 3px;
+  margin-top: 0;
 }
 
 /* Classes */
@@ -50,14 +72,13 @@ body {
   background-color: #EE724E;
   color: #fff;
   font-size: 12px;
-  line-height: 24px;
 }
 
 #footer > .section {
   margin-top: 25px;
 }
 
-#footer a {
+#footer a, #footer b {
   color: #fff;
 }
 
