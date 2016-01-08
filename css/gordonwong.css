@@ -15,10 +15,36 @@ body {
   margin-bottom: 2.5px;
   color: #EE724E;
 }
+
 #subtitle {
   margin-top: 0;
   color: #4A4B4C;
 }
+
+#tabs > li > a {
+  margin: 0 20px 0 0;
+  padding: 10px 0;
+  color: #EE724E;
+  background: none;
+  font-weight: bold;
+  text-align: left;
+  border-top: 5px solid #EE724E;
+  border-bottom: 0;
+  border-left: 0;
+  border-right: 0;
+  border-radius: 0;
+  transition: color .3s ease, border-color .3s ease;
+}
+
+#tabs > li:last-child > a {
+  margin: 0;
+}
+
+#tabs > li.active > a, #tabs > li > a:hover {
+  color: #4A4B4C;
+  border-color: #4A4B4C;
+}
+
 #footer {
   height: 150px;
   background-color: #EE724E;
@@ -26,9 +52,18 @@ body {
   font-size: 12px;
   line-height: 24px;
 }
+
 #footer > .section {
   margin-top: 25px;
 }
+
 #footer a {
   color: #fff;
+}
+
+/* Media queries */
+@media(max-width: 768px) {
+  #tabs > li > a {
+    margin: 0;
+  }
 }
