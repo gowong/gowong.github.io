@@ -15,6 +15,11 @@ a, a:hover, a > b {
   color: #EE724E;
 }
 
+em {
+  font-style: normal;
+  color: #EE724E;
+}
+
 hr {
   height: 1px;
   background-color: #EEEFF0;
