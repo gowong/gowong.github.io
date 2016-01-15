@@ -38,6 +38,10 @@ hr.section-hr {
 }
 
 /* IDs */
+#page {
+  margin-bottom: 50px;
+}
+
 #title {
   margin-bottom: 2.5px;
   color: #EE724E;
@@ -89,6 +93,11 @@ hr.section-hr {
 
 /* Media queries */
 @media(max-width: 768px) {
+  body {
+    /* Footer is hidden in XS */
+    padding-bottom: 0;
+  }
+
   #tabs > li > a {
     margin: 0;
   }
