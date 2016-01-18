@@ -85,6 +85,40 @@ hr.section-hr {
   opacity: 0.95;
 }
 
+.experience-timeline-item {
+  position: relative;
+  margin: 50px 0;
+}
+
+.experience-timeline-item:first-child {
+  margin-top: 0;
+}
+
+.experience-timeline-item:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.experience-timeline-dot {
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background-color: #EE724E;
+}
+
+.experience-timeline-content {
+  position: relative;
+  /* dot width + 20px */
+  margin-left: 46px;
+}
+
+.experience-timeline-content > .experience-timeline-date {
+  /* Equal to dot width */
+  line-height: 26px;
+}
+
 /* IDs */
 #title {
   margin-bottom: 2.5px;
@@ -118,6 +152,27 @@ hr.section-hr {
 #tabs > li.active > a, #tabs > li > a:hover {
   color: #4A4B4C;
   border-color: #4A4B4C;
+}
+
+#experience {
+  margin-bottom: 0;
+}
+
+#experience-timeline {
+  position: relative;
+  padding: 50px 0;
+}
+
+/* Vertical line */
+#experience-timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  /* (dot width - line width) / 2 */
+  left: 11px;
+  height: 100%;
+  width: 4px;
+  background-color: #EE724E;
 }
 
 #footer {
@@ -159,6 +214,13 @@ hr.section-hr {
   }
 }
 
+/* Extra small and small */
+@media (max-width:991px) {
+  .experience-timeline-item:last-child {
+    margin-bottom: 0;
+  }
+}
+
 /* Medium only */
 @media (min-width:992px) and (max-width:1199px) {
   #software-thumbnails[data-columns]::before {
@@ -170,5 +232,45 @@ hr.section-hr {
 @media (min-width:1200px) {
   #software-thumbnails[data-columns]::before {
     content: '4 .col-lg-3';
+  }
+}
+
+/* Medium and large */
+@media (min-width: 992px) {
+  #experience-timeline::before, .experience-timeline-dot {
+    /* Center line and dots */
+    left: 50%;
+  }
+
+  #experience-timeline::before {
+    /* (line width / -2) */
+    margin-left: -2px;
+  }
+
+  .experience-timeline-dot {
+    /* (dot width / -2) */
+    margin-left: -13px;
+  }
+
+  .experience-timeline-content {
+    margin-left: 0;
+    width: 45%;
+  }
+
+  .experience-timeline-item:nth-child(even) > .experience-timeline-content {
+    float: right;
+  }
+
+  .experience-timeline-content > .experience-timeline-date {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 122%;
+  }
+
+  .experience-timeline-item:nth-child(even) > .experience-timeline-content > .experience-timeline-date {
+    left: auto;
+    right: 122%;
+    text-align: right;
   }
 }
