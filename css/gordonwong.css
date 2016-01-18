@@ -4,7 +4,7 @@ body {
   color: #7E7F80;
   line-height: 22px;
   /* Must be same as footer height */
-  padding-bottom: 150px;
+  padding-bottom: 140px;
 }
 
 b {
@@ -117,7 +117,7 @@ hr.section-hr {
 }
 
 #footer {
-  height: 150px;
+  height: 140px;
   background-color: #EE724E;
   color: #fff;
   font-size: 12px;
