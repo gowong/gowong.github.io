@@ -119,6 +119,10 @@ hr.section-hr {
   line-height: 26px;
 }
 
+.experience-timeline-content  > img {
+  width: 100%;
+}
+
 /* IDs */
 #title {
   margin-bottom: 2.5px;
