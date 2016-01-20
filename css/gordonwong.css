@@ -75,7 +75,7 @@ hr.section-hr {
   line-height: 45px;
   text-align: center;
   opacity: 0;
-  transition: opacity .2s ease-in-out;
+  transition: opacity .3s ease;
 }
 
 .software-thumbnail:hover > .software-thumbnail-button {
@@ -93,6 +93,10 @@ hr.section-hr {
 
 .experience-timeline-item:first-child {
   margin-top: 0;
+}
+
+.experience-timeline-item:last-child {
+  margin-bottom: 150px;
 }
 
 .experience-timeline-item:after {
@@ -120,8 +124,16 @@ hr.section-hr {
   line-height: 26px;
 }
 
-.experience-timeline-content > img {
-  width: 100%;
+.experience-timeline-content > img, .experience-carousel-item > img {
+  display: block;
+  max-width: 100%;
+  margin: 0 auto;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
+
+.experience-timeline-content > img.experience-timeline-logo {
+  max-height: 150px;
 }
 
 /* IDs */
@@ -177,7 +189,12 @@ hr.section-hr {
   left: 11px;
   height: 100%;
   width: 4px;
+  border-radius: 2px 2px 0 0;
   background-color: #EE724E;
+}
+
+#experience-timeline-item-box > .experience-timeline-content > img {
+  border: none;
 }
 
 #footer {
