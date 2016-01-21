@@ -136,6 +136,46 @@ hr.section-hr {
   max-height: 150px;
 }
 
+.experience-carousel-item > img {
+  max-height: 500px;
+}
+
+/* Previous/Next buttons */
+.experience-carousel > .owl-controls > .owl-buttons > div {
+  position: absolute;
+  /* Middle of carousel - height of pagination indicators */
+  top: calc(50% - 26px);
+  padding: 5px 10px;
+  margin: 0 15px;
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity .3s ease;
+}
+
+.experience-carousel:hover > .owl-controls > .owl-buttons > div {
+  opacity: 0.7;
+}
+
+.experience-carousel > .owl-controls > .owl-buttons > div:hover {
+  opacity: 0.95;
+}
+ 
+.experience-carousel > .owl-controls > .owl-buttons > .owl-prev {
+  left: 0;
+}
+ 
+.experience-carousel > .owl-controls > .owl-buttons > .owl-next {
+  right: 0;
+}
+
+/* Pagination indicators */
+.experience-carousel > .owl-controls > .owl-pagination > .owl-page > span {
+  width: 10px;
+  height: 10px;
+  margin: 5px;
+  transition: opacity .3s ease;
+}
+
 /* IDs */
 #title {
   margin-bottom: 2.5px;

@@ -13,6 +13,21 @@ function registerSoftwareThumbnailClickHandlers() {
   });
 }
 
+function setupExperienceCarousels() {
+  $('.owl-carousel').each(function() {
+    var options = {
+      lazyLoad: true,
+      scrollPerPage: true,
+      navigation: true,
+      navigationText: [
+        '<span class="glyphicon glyphicon-chevron-left"></span>',
+        '<span class="glyphicon glyphicon-chevron-right"></span>'
+      ]
+    };
+    $(this).owlCarousel(options);
+  });
+}
+
 $(function() {
   // Show tab indicated by the URL hash
   if (window.location.hash) {
@@ -25,4 +40,5 @@ $(function() {
   });
 
   registerSoftwareThumbnailClickHandlers();
+  setupExperienceCarousels();
 });
