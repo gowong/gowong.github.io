@@ -36,6 +36,10 @@ hr.section-hr {
   margin-top: 0;
 }
 
+img[data-lightbox] {
+  cursor: zoom-in;
+}
+
 /* Classes */
 .section {
   margin-top: 50px;
@@ -174,6 +178,42 @@ hr.section-hr {
   height: 10px;
   margin: 5px;
   transition: opacity .3s ease;
+}
+
+:not(.grabbing) > .owl-item {
+  /* Indicate that the carousel items can be dragged */
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+
+.owl-wrapper.grabbing img {
+  /* Override zoom-in cursor */
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
+}
+
+.lity {
+  cursor: zoom-out;
+  background-color: rgba(255, 255, 255, 0.85);
+}
+
+.lity-content {
+  max-width: 90%;
+  max-height: 90%;
+  margin: auto;
+}
+
+.lity-content::after {
+  box-shadow: none;
+}
+
+.lity-content > img {
+  border-radius: 2px;
+}
+
+.lity-close {
+  /* Hide close button */
+  display: none;
 }
 
 /* IDs */
