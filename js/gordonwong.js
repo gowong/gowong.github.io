@@ -33,12 +33,23 @@ function registerLightboxHandlers() {
 }
 
 function registerSoftwareThumbnailClickHandlers() {
-  // Show experience tab when clicking a software thumbnail
-  var clickHandler = function() {
+  var clickHandler = function(experienceItemSelector) {
+    // Show experience tab
     showTab('#experience');
+
+    // Wait for tab animation and tab content to finish loading
+    setTimeout(function() {
+      // Scroll to item
+      $('html, body').animate({
+        scrollTop: $(experienceItemSelector).offset().top
+      }, 700);
+    }, 800);
   };
+
   $('.software-thumbnail').each(function() {
-    $(this).click(clickHandler);
+    $(this).click(function() {
+      clickHandler($(this).attr('data-target'));
+    });
   });
 }
 
