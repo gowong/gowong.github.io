@@ -5,10 +5,20 @@ function showTab(tabId) {
 
 function registerLightboxHandlers() {
   var lightbox = lity();
+  var colorThief = new ColorThief();
 
   // Lightbox must be opened programmatically to be controlled programmatically
   $(document).on('click', '[data-lightbox]', function(event) {
-    lightbox(event.target.src);
+    var elImage = event.target;
+    // Get image's dominant color
+    var color = colorThief.getColor(elImage);
+
+    // Open lightbox
+    lightbox(elImage.src);
+
+    // Set lightbox's background color
+    var rgba = 'rgba(' + color[0] + ',' + color[1] + ',' + color[2] + ',0.85)';
+    $('.lity').css('background-color', rgba);
   });
 
   // Listen for open events
