@@ -38,6 +38,7 @@ hr.section-hr {
 }
 
 img[data-lightbox] {
+  cursor: pointer; /* Fallback */
   cursor: zoom-in;
 }
 
@@ -183,19 +184,22 @@ img[data-lightbox] {
   transition: opacity .3s ease;
 }
 
+/* Indicate that the carousel items can be dragged */
 :not(.grabbing) > .owl-item {
-  /* Indicate that the carousel items can be dragged */
+  cursor: move; /* Fallback */
   cursor: -webkit-grab;
   cursor: grab;
 }
 
-.owl-wrapper.grabbing img {
-  /* Override zoom-in cursor */
+/* Override zoom-in cursor */
+.grabbing, .grabbing img {
+  cursor: move; /* Fallback */
   cursor: -webkit-grabbing;
   cursor: grabbing;
 }
 
 .lity {
+  cursor: pointer; /* Fallback */
   cursor: zoom-out;
   background-color: rgba(255, 255, 255, 0.85);
 }
