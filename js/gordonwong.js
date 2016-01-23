@@ -64,6 +64,16 @@ function setupExperienceCarousels() {
         '<span class="glyphicon glyphicon-chevron-right"></span>'
       ]
     };
+
+    // Determine number of items on each page
+    var dataItems = $(this).attr('data-items');
+    if (dataItems) {
+      options.items = dataItems;
+    } else {
+      options.singleItem = true;
+      options.autoHeight = true;
+    }
+
     $(this).owlCarousel(options);
   });
 }
