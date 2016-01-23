@@ -2,6 +2,7 @@
 body {
   background-color: #fff;
   color: #7E7F80;
+  font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   line-height: 22px;
   /* Must be same as footer height */
   padding-bottom: 140px;
