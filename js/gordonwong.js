@@ -42,8 +42,8 @@ function registerSoftwareThumbnailClickHandlers() {
       // Scroll to item
       $('html, body').animate({
         scrollTop: $(experienceItemSelector).offset().top
-      }, 700);
-    }, 800);
+      }, 800);
+    }, 1000);
   };
 
   $('.software-thumbnail').each(function() {
@@ -71,6 +71,7 @@ function setupExperienceCarousels() {
       options.items = dataItems;
     } else {
       options.singleItem = true;
+      // Can only be used with the singleItem option
       options.autoHeight = true;
     }
 
