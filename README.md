@@ -1,4 +1,4 @@
 gowong.github.io
 ================
 
-Gordon Wong's personal website hosted on GitHub Pages.
+Gordon Wong's personal website www.gordonwong.com
