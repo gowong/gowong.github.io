@@ -25,11 +25,11 @@ function registerLightboxHandlers() {
   $(document).on('lity:open', function(event, elLightbox, trigger) {
     // Close when clicking the image (default behavior only closes when
     // clicking outside of the image)
-    $(elLightbox).on('click', $.debounce(250, true, lightbox.close));
+    $(elLightbox).on('click', lightbox.close);
   });
 
   // Close when scrolling the window
-  $(window).on('scroll', lightbox.close);
+  $(window).on('scroll', $.debounce(250, true, lightbox.close));
 }
 
 function registerSoftwareThumbnailClickHandlers() {
