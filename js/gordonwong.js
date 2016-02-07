@@ -48,7 +48,10 @@ function registerSoftwareThumbnailClickHandlers() {
 
   $('.software-thumbnail').each(function() {
     $(this).click(function() {
-      clickHandler($(this).attr('data-target'));
+      var dataTarget = $(this).attr('data-target');
+      if (dataTarget) {
+        clickHandler(dataTarget);
+      }
     });
   });
 }

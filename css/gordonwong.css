@@ -64,8 +64,11 @@ img[data-lightbox] {
   transition: opacity .3s ease;
 }
 
-.software-thumbnail:hover {
+.software-thumbnail:focus, .software-thumbnail:hover {
   border-color: #EE724E !important;
+}
+
+.software-thumbnail:hover {
   opacity: 0.8;
 }
 
