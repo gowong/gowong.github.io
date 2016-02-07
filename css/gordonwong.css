@@ -61,10 +61,12 @@ img[data-lightbox] {
   padding: 0;
   margin: 0 auto 10px auto;
   border-radius: 7px;
+  transition: opacity .3s ease;
 }
 
 .software-thumbnail:hover {
   border-color: #EE724E !important;
+  opacity: 0.8;
 }
 
 .software-thumbnail-button {
