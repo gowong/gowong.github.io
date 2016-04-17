@@ -55,6 +55,10 @@ img[data-lightbox] {
   margin-bottom: 50px;
 }
 
+.software-thumbnail-title {
+  font-family: 'Inconsolata';
+}
+
 .software-thumbnail {
   position: relative;
   max-width: 500px;
@@ -235,7 +239,8 @@ img[data-lightbox] {
 }
 
 #subtitle {
-  margin-top: 0;
+  font-family: 'Inconsolata';
+  margin-top: 10px;
   color: #4A4B4C;
 }
 
@@ -252,6 +257,7 @@ img[data-lightbox] {
   border-right: 0;
   border-radius: 0;
   transition: color .3s ease, border-color .3s ease;
+  font-family: 'Inconsolata';
 }
 
 #tabs > li:last-child > a {
