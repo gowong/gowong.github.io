@@ -157,6 +157,10 @@ img[data-lightbox] {
   max-height: 500px;
 }
 
+.experience-carousel > .owl-controls {
+  margin-top: 15px;
+}
+
 /* Previous/Next buttons */
 .experience-carousel > .owl-controls > .owl-buttons > div {
   position: absolute;
@@ -187,8 +191,8 @@ img[data-lightbox] {
 
 /* Pagination indicators */
 .experience-carousel > .owl-controls > .owl-pagination > .owl-page > span {
-  width: 10px;
-  height: 10px;
+  width: 8px;
+  height: 8px;
   margin: 5px;
   transition: opacity .3s ease;
 }
@@ -296,7 +300,7 @@ img[data-lightbox] {
 }
 
 #footer {
-  height: 140px;
+  height: 125px;
   background-color: #EE724E;
   color: #fff;
   font-size: 12px;
