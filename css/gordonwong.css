@@ -5,7 +5,7 @@ body {
   font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   line-height: 22px;
   /* Must be same as footer height */
-  padding-bottom: 140px;
+  padding-bottom: 125px;
 }
 
 b {
@@ -300,6 +300,7 @@ img[data-lightbox] {
 }
 
 #footer {
+  /* Must be same as body's bottom padding */
   height: 125px;
   background-color: #EE724E;
   color: #fff;
