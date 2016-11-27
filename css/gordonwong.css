@@ -136,7 +136,6 @@ img[data-lightbox] {
 
 .experience-timeline-content > .experience-timeline-date {
   display: block;
-  padding-top: 25px;
   /* Equal to dot width */
   line-height: 20px;
 }
@@ -391,7 +390,6 @@ img[data-lightbox] {
     width: 100%;
     top: 0;
     left: 122%;
-    padding-top: 0;
   }
 
   .experience-timeline-item:nth-child(even) > .experience-timeline-content > .experience-timeline-date {
