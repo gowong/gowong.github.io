@@ -235,6 +235,12 @@ img[data-lightbox] {
   display: none;
 }
 
+/* LinkedIn Badge */
+.LI-profile-badge,
+.LI-badge-container {
+  width: 100% !important;
+}
+
 /* IDs */
 #title {
   margin-bottom: 2.5px;
