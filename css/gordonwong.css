@@ -241,6 +241,18 @@ img[data-lightbox] {
   width: 100% !important;
 }
 
+.LI-view-profile {
+  color: #EE724E !important;
+  border-color: #EE724E !important;
+  transition: box-shadow .3s ease !important;
+}
+
+.LI-view-profile:active,
+.LI-view-profile:focus,
+.LI-view-profile:hover {
+  box-shadow: inset 1px 1px #EE724E, inset -1px -1px #EE724E !important;
+}
+
 /* IDs */
 #title {
   margin-bottom: 2.5px;
