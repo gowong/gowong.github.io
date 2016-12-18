@@ -51,6 +51,20 @@ img[data-lightbox] {
   margin-bottom: 50px;
 }
 
+.thumbnail {
+  border-radius: 7px;
+  transition: border .3s ease, opacity .3s ease;
+}
+
+.thumbnail:focus,
+.thumbnail:hover {
+  border-color: #EE724E !important;
+}
+
+.thumbnail:hover {
+  opacity: 0.8;
+}
+
 .software-thumbnail-container {
   margin-bottom: 50px;
 }
@@ -64,16 +78,6 @@ img[data-lightbox] {
   max-width: 500px;
   padding: 0;
   margin: 0 auto 10px auto;
-  border-radius: 7px;
-  transition: opacity .3s ease;
-}
-
-.software-thumbnail:focus, .software-thumbnail:hover {
-  border-color: #EE724E !important;
-}
-
-.software-thumbnail:hover {
-  opacity: 0.8;
 }
 
 .software-thumbnail-button {
@@ -197,14 +201,15 @@ img[data-lightbox] {
 }
 
 /* Indicate that the carousel items can be dragged */
-:not(.grabbing) > .owl-item {
+.owl-wrapper:not(.grabbing) > .owl-item {
   cursor: move; /* Fallback */
   cursor: -webkit-grab;
   cursor: grab;
 }
 
 /* Override zoom-in cursor */
-.grabbing, .grabbing img {
+.owl-wrapper.grabbing,
+.owl-wrapper.grabbing img {
   cursor: move; /* Fallback */
   cursor: -webkit-grabbing;
   cursor: grabbing;
