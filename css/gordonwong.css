@@ -368,6 +368,9 @@ img[data-lightbox] {
   #software-thumbnails[data-columns]::before {
     content: '3 .col-md-4';
   }
+  .LI-logo {
+    display: none !important;
+  }
 }
 
 /* Large */
