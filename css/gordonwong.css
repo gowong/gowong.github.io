@@ -235,24 +235,6 @@ img[data-lightbox] {
   display: none;
 }
 
-/* LinkedIn Badge */
-.LI-profile-badge,
-.LI-badge-container {
-  width: 100% !important;
-}
-
-.LI-view-profile {
-  color: #EE724E !important;
-  border-color: #EE724E !important;
-  transition: box-shadow .3s ease !important;
-}
-
-.LI-view-profile:active,
-.LI-view-profile:focus,
-.LI-view-profile:hover {
-  box-shadow: inset 1px 1px #EE724E, inset -1px -1px #EE724E !important;
-}
-
 /* IDs */
 #title {
   margin-bottom: 2.5px;
@@ -316,6 +298,36 @@ img[data-lightbox] {
   border: none;
 }
 
+#linkedin-badge .LI-badge-container {
+  font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+#linkedin-badge .LI-profile-badge,
+#linkedin-badge .LI-badge-container {
+  width: 100%;
+}
+
+#linkedin-badge .LI-name a:active,
+#linkedin-badge .LI-name a:focus,
+#linkedin-badge .LI-name a:hover,
+#linkedin-badge .LI-field a:active,
+#linkedin-badge .LI-field a:focus,
+#linkedin-badge .LI-field a:hover {
+  color: #EE724E;
+  text-decoration: underline;
+}
+
+#linkedin-badge .LI-view-profile {
+  color: #EE724E;
+  border-color: #EE724E;
+}
+
+#linkedin-badge .LI-view-profile:active,
+#linkedin-badge .LI-view-profile:focus,
+#linkedin-badge .LI-view-profile:hover {
+  box-shadow: inset 1px 1px #EE724E, inset -1px -1px #EE724E;
+}
+
 #footer {
   /* Must be same as body's bottom padding */
   height: 125px;
@@ -367,9 +379,6 @@ img[data-lightbox] {
 @media (min-width:992px) and (max-width:1199px) {
   #software-thumbnails[data-columns]::before {
     content: '3 .col-md-4';
-  }
-  .LI-logo {
-    display: none !important;
   }
 }
 

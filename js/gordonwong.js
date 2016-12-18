@@ -93,6 +93,16 @@ $(function() {
     showTab('#news');
   });
 
+  // Remove LinkedIn logo and replace text
+  $('#news-tab-link').on('shown.bs.tab', function() {
+    var $viewProfile = $('#linkedin-badge .LI-view-profile');
+    // Only remove logo if text can be updated, otherwise it's not obvious this
+    // is a linkedin profile
+    if ($viewProfile.length > 0) {
+      $viewProfile.text('View LinkedIn');
+      $('#linkedin-badge .LI-logo').remove();
+    }
+  });
   registerSoftwareThumbnailClickHandlers();
   registerLightboxHandlers();
   setupExperienceCarousels();
