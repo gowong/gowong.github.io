@@ -153,6 +153,19 @@ $(function() {
     setTimeout(setupPhotoGallery, 0);
   });
 
+  // Setup photo gallery the first time the photos tab is clicked
+  var isPhotoGallerySetup = false;
+  $('#photos-tab-link').on('shown.bs.tab', function() {
+    if (isPhotoGallerySetup) {
+      // Refresh the gallery size to fix the gallery disappearing when the window
+      // is resized and a different tab is selected
+      $('#photo-gallery').nanoGallery('refreshSize');
+      return;
+    }
+    setupPhotoGallery();
+    isPhotoGallerySetup = true;
+  });
+
   registerSoftwareThumbnailClickHandlers();
   registerLightboxHandlers();
   setupExperienceCarousels();
