@@ -145,14 +145,12 @@ $(function() {
     }
   });
 
-  // Setup photo gallery the first time the photos tab is clicked
-  var isPhotoGallerySetup = false;
+  // Setup photo gallery when the photos tab is clicked
   $('#photos-tab-link').on('shown.bs.tab', function() {
-    if (isPhotoGallerySetup) {
-      return;
-    }
-    setupPhotoGallery();
-    isPhotoGallerySetup = true;
+    // If the photo gallery is already setup, calling setup() again won't have any effect
+    // HACK to fix photo gallery occassionally failing to load, possibly due to DOM not
+    // being ready when setup() is called.
+    setTimeout(setupPhotoGallery, 0);
   });
 
   registerSoftwareThumbnailClickHandlers();
