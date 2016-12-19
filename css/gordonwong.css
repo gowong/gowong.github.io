@@ -303,6 +303,30 @@ img[data-lightbox] {
   border: none;
 }
 
+#photo-gallery .nanoGalleryThumbnailContainer {
+  background-color: #fff;
+  border: 1px solid #ddd;
+}
+
+#photo-gallery .nanoGalleryThumbnailContainer .imgContainer  {
+   /*Same as border color for .nanoGalleryThumbnailContainer */
+  background-color: #ddd;
+}
+
+#photo-gallery .nanoGalleryThumbnailContainer .labelImage {
+  background-color: #fff;
+}
+
+#photo-gallery .nanoGalleryThumbnailContainer .labelImageTitle {
+  color: #4A4B4C;
+  font-weight: bold;
+}
+
+#photo-gallery .nanoGalleryThumbnailContainer .labelDescription {
+  color: #7E7F80;
+  font-weight: bold;
+}
+
 #linkedin-badge .LI-badge-container {
   font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }

@@ -82,6 +82,47 @@ function setupExperienceCarousels() {
   });
 }
 
+function setupPhotoGallery() {
+  var flickrUserId = '129081259@N03';
+
+  $('#photo-gallery').nanoGallery({
+    kind: 'flickr',
+    userID: flickrUserId,
+    photoset: 'none',
+    photoSorting: 'standard',
+    thumbnailWidth: 'auto',
+    thumbnailHeight: 300,
+    thumbnailLabel: {
+      display: true,
+      position: 'overImageOnMiddle',
+      hideIcons: true,
+      align: 'center'
+    },
+    thumbnailHoverEffect: [
+      { name: 'labelAppear75', duration: 300 },
+    ],
+    theme: 'light',
+    colorScheme: 'none',
+    thumbnailGutterWidth: 15,
+    thumbnailGutterHeight: 15,
+    locationHash: false,
+    displayBreadcrumb: false,
+    fnThumbnailInit: onPhotoGalleryThumbnailInit,
+    fnThumbnailOpen: onPhotoGalleryThumbnailOpen.bind(this, flickrUserId)
+  });
+}
+
+function onPhotoGalleryThumbnailInit(thumbnail) {
+  var $thumbnail = $(thumbnail[0]);
+  $thumbnail.addClass('thumbnail');
+}
+
+function onPhotoGalleryThumbnailOpen(flickrUserId, items) {
+  var openedItem = items[0];
+  var itemURL = 'https://www.flickr.com/photos/' + flickrUserId + '/' + openedItem.GetID();
+  window.open(itemURL);
+}
+
 $(function() {
   // Show tab indicated by the URL hash
   if (window.location.hash) {
@@ -103,6 +144,17 @@ $(function() {
       $('#linkedin-badge .LI-logo').remove();
     }
   });
+
+  // Setup photo gallery the first time the photos tab is clicked
+  var isPhotoGallerySetup = false;
+  $('#photos-tab-link').on('shown.bs.tab', function() {
+    if (isPhotoGallerySetup) {
+      return;
+    }
+    setupPhotoGallery();
+    isPhotoGallerySetup = true;
+  });
+
   registerSoftwareThumbnailClickHandlers();
   registerLightboxHandlers();
   setupExperienceCarousels();
