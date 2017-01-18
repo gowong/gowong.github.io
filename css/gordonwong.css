@@ -308,9 +308,14 @@ img[data-lightbox] {
   border: 1px solid #ddd;
 }
 
-#photo-gallery .nanoGalleryThumbnailContainer .imgContainer  {
-   /*Same as border color for .nanoGalleryThumbnailContainer */
+#photo-gallery .nanoGalleryThumbnailContainer .imgContainer {
+  /*Same as border color for .nanoGalleryThumbnailContainer */
   background-color: #ddd;
+}
+
+#photo-gallery .nanoGalleryThumbnailContainer .imgContainer > img {
+  width: 100%;
+  height: 100%;
 }
 
 #photo-gallery .nanoGalleryThumbnailContainer .labelImage {
