@@ -51,8 +51,12 @@ img[data-lightbox] {
   margin-bottom: 50px;
 }
 
+.img-rounded {
+  border-radius: 4px;
+}
+
 .thumbnail {
-  border-radius: 7px;
+  border-radius: 4px;
   transition: border .3s ease, opacity .3s ease;
 }
 
@@ -78,6 +82,11 @@ img[data-lightbox] {
   max-width: 500px;
   padding: 0;
   margin: 0 auto 10px auto;
+}
+
+.software-thumbnail > img {
+  width: 100%;
+  height: 100%;
 }
 
 .software-thumbnail-button {
@@ -149,7 +158,7 @@ img[data-lightbox] {
   max-width: 100%;
   margin: 0 auto;
   border: 1px solid #ddd;
-  border-radius: 6px;
+  border-radius: 4px;
 }
 
 .experience-timeline-content > img.experience-timeline-logo {
