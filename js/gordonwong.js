@@ -122,6 +122,11 @@ function onPhotoGalleryThumbnailOpen(flickrUserId, items) {
 }
 
 $(function() {
+  // Show tab matching URL hash when page is refreshed
+  if (location.hash) {
+    showTab(location.hash);
+  }
+
   // Update URL hash when switching tabs
   $('#tabs a[data-toggle="tab"]').on('click', function(e) {
     history.pushState(null, null, $(this).attr('href'));
