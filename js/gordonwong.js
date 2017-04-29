@@ -34,10 +34,8 @@ function registerLightboxHandlers() {
 
 function registerSoftwareThumbnailClickHandlers() {
   var clickHandler = function(experienceItemSelector) {
-    // Show experience tab
-    showTab('#experience');
-
-    // Wait for tab animation and tab content to finish loading
+    // Wait for tab animation and tab content to finish loading after switching
+    // to experience tab
     setTimeout(function() {
       // Scroll to item
       $('html, body').animate({
@@ -124,14 +122,15 @@ function onPhotoGalleryThumbnailOpen(flickrUserId, items) {
 }
 
 $(function() {
-  // Show tab indicated by the URL hash
-  if (window.location.hash) {
-      showTab(window.location.hash);
-  }
+  // Update URL hash when switching tabs
+  $('#tabs a[data-toggle="tab"]').on('click', function(e) {
+    history.pushState(null, null, $(this).attr('href'));
+  });
 
-  // Show news tab when clicking link in footer
-  $('#footer-news-link').click(function() {
-    showTab('#news');
+  // Switch tabs when browser history changes
+  window.addEventListener('popstate', function(e) {
+    // Default to software tab
+    showTab(location.hash || '#software');
   });
 
   // Remove LinkedIn logo and replace text
