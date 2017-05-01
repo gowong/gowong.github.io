@@ -192,11 +192,11 @@ img[data-lightbox] {
 .experience-carousel > .owl-controls > .owl-buttons > div:hover {
   opacity: 0.95;
 }
- 
+
 .experience-carousel > .owl-controls > .owl-buttons > .owl-prev {
   left: 0;
 }
- 
+
 .experience-carousel > .owl-controls > .owl-buttons > .owl-next {
   right: 0;
 }
@@ -369,6 +369,10 @@ img[data-lightbox] {
 #linkedin-badge .LI-view-profile:focus,
 #linkedin-badge .LI-view-profile:hover {
   box-shadow: inset 1px 1px #EE724E, inset -1px -1px #EE724E;
+}
+
+#linkedin-badge .LI-logo {
+  display: none;
 }
 
 #footer {
