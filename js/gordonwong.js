@@ -122,11 +122,6 @@ function onPhotoGalleryThumbnailOpen(flickrUserId, items) {
 }
 
 $(function() {
-  // Show tab matching URL hash when page is refreshed
-  if (location.hash) {
-    showTab(location.hash);
-  }
-
   // Update URL hash when switching tabs
   $('#tabs a[data-toggle="tab"]').on('click', function(e) {
     history.pushState(null, null, $(this).attr('href'));
@@ -162,4 +157,14 @@ $(function() {
   registerSoftwareThumbnailClickHandlers();
   registerLightboxHandlers();
   setupExperienceCarousels();
+
+  // Show tab matching URL hash when page is refreshed
+  // NOTE: This must be done after all tab listeners are registered
+  if (location.hash) {
+    showTab(location.hash);
+  }
+  // Default to software tab
+  else {
+    showTab('#software');
+  }
 });
