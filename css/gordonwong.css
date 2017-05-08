@@ -1,11 +1,14 @@
 /* Tags */
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
 body {
   background-color: #fff;
   color: #7E7F80;
   font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   line-height: 22px;
-  /* Must be same as footer height */
-  padding-bottom: 125px;
 }
 
 b {
@@ -250,6 +253,16 @@ img[data-lightbox] {
 }
 
 /* IDs */
+#page-content {
+  min-height: 100%;
+  /* Equal to height of #footer */
+  margin-bottom: -156px;
+  /* Needed to remove unnecessary scrollbar on page */
+  margin-top: 0;
+  /* Should match margin for .section */
+  padding-top: 50px;
+}
+
 #title {
   margin-bottom: 2.5px;
   color: #EE724E;
@@ -375,16 +388,18 @@ img[data-lightbox] {
   display: none;
 }
 
+#footer, #footer-spacer {
+  /* Equal to height of #footer */
+  height: 156px;
+}
+
 #footer {
-  /* Must be same as body's bottom padding */
-  height: 125px;
+  display: flex;
+  justify-content: center;
+  padding: 30px 0 60px 0;
   background-color: #EE724E;
   color: #fff;
   font-size: 12px;
-}
-
-#footer > .section {
-  margin-top: 25px;
 }
 
 #footer a, #footer b {
@@ -394,9 +409,9 @@ img[data-lightbox] {
 /* Media queries */
 /* Extra small only */
 @media (max-width:767px) {
-  body {
+  #footer-spacer {
     /* Footer is hidden in XS */
-    padding-bottom: 0;
+    display: none;
   }
 
   #tabs > li > a {
