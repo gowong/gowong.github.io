@@ -158,6 +158,10 @@ $(function() {
   registerLightboxHandlers();
   setupExperienceCarousels();
 
+  $('.email-link').click(function() {
+    window.open('mailto:gordon@gordonwong.com');
+  });
+
   // Show tab matching URL hash when page is refreshed
   // NOTE: This must be done after all tab listeners are registered
   if (location.hash) {
