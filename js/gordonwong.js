@@ -159,7 +159,11 @@ $(function() {
   setupExperienceCarousels();
 
   $('.email-link').click(function() {
-    window.open('mailto:gordon@gordonwong.com');
+    var part1 = 'mailto:'
+    var part2 = 'gordon@';
+    var part3 = 'gordonwong.';
+    var part4 = 'com';
+    window.open(part1 + part2 + part3 + part4);
   });
 
   // Show tab matching URL hash when page is refreshed
