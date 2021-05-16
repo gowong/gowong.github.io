@@ -354,40 +354,6 @@ img[data-lightbox] {
   font-weight: bold;
 }
 
-#linkedin-badge .LI-badge-container {
-  font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-}
-
-#linkedin-badge .LI-profile-badge,
-#linkedin-badge .LI-badge-container {
-  width: 100%;
-}
-
-#linkedin-badge .LI-name a:active,
-#linkedin-badge .LI-name a:focus,
-#linkedin-badge .LI-name a:hover,
-#linkedin-badge .LI-field a:active,
-#linkedin-badge .LI-field a:focus,
-#linkedin-badge .LI-field a:hover {
-  color: #EE724E;
-  text-decoration: underline;
-}
-
-#linkedin-badge .LI-view-profile {
-  color: #EE724E;
-  border-color: #EE724E;
-}
-
-#linkedin-badge .LI-view-profile:active,
-#linkedin-badge .LI-view-profile:focus,
-#linkedin-badge .LI-view-profile:hover {
-  box-shadow: inset 1px 1px #EE724E, inset -1px -1px #EE724E;
-}
-
-#linkedin-badge .LI-logo {
-  display: none;
-}
-
 #footer, #footer-spacer {
   /* Equal to height of #footer */
   height: 156px;
